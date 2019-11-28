@@ -1,11 +1,5 @@
 #include "includeFile.h"
 
-/*
-This is my first project, and I have to apologize to you.
-I suspect that I made a lot of mistakes in my coding style).
-I hope in a few weeks I will do it better.
-*/
-
 int main(){
 	setlocale(LC_ALL, "ru");
 	Character* person;
