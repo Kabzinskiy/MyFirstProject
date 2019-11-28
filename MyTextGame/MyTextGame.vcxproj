@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2A1F5CD8-E332-448A-92B1-2785D6096F85}</ProjectGuid>
+    <RootNamespace>MyTextGame</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="characterWeapon.cpp" />
+    <ClCompile Include="createMonk.cpp" />
+    <ClCompile Include="createRogue.cpp" />
+    <ClCompile Include="createWar.cpp" />
+    <ClCompile Include="dealingDamage.cpp" />
+    <ClCompile Include="fightFunction.cpp" />
+    <ClCompile Include="forestLocation.cpp" />
+    <ClCompile Include="releaseOfCharacterMemory.cpp" />
+    <ClCompile Include="funcStartMeadow.cpp" />
+    <ClCompile Include="loadFromFile.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="massiveWeapon.cpp" />
+    <ClCompile Include="monstr.cpp" />
+    <ClCompile Include="operatorForCharacter.cpp" />
+    <ClCompile Include="saveCharacter.cpp" />
+    <ClCompile Include="startChoiseFunc.cpp" />
+    <ClCompile Include="store.cpp" />
+    <ClCompile Include="windField.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="character.h" />
+    <ClInclude Include="characterWeapon.h" />
+    <ClInclude Include="createMonk.h" />
+    <ClInclude Include="createRogue.h" />
+    <ClInclude Include="createWar.h" />
+    <ClInclude Include="dealingDamage.h" />
+    <ClInclude Include="fightFunction.h" />
+    <ClInclude Include="forestLocation.h" />
+    <ClInclude Include="releaseOfCharacterMemory.h" />
+    <ClInclude Include="funcStartMeadow.h" />
+    <ClInclude Include="includeFile.h" />
+    <ClInclude Include="loadFromFile.h" />
+    <ClInclude Include="store.h" />
+    <ClInclude Include="massiveWeapon.h" />
+    <ClInclude Include="monstr.h" />
+    <ClInclude Include="operatorForCharacter.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="saveCharacter.h" />
+    <ClInclude Include="startChoiseFunc.h" />
+    <ClInclude Include="windField.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyTextGame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
