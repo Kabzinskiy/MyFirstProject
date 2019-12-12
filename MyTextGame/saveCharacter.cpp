@@ -3,7 +3,6 @@
 
 void saveCharacterToFile(Character& yourPerson)
 {
-	setlocale(LC_ALL, "ru");
 	string fileExtension = ".txt";
 	string pathToFile = (yourPerson.get_nameCharacter() + fileExtension);
 	ofstream saveFile;
@@ -14,11 +13,11 @@ void saveCharacterToFile(Character& yourPerson)
 	}
 	catch ( const std::exception& error )
 	{
-		cout << "Ошибка открытия файла!!!" << endl;
+		cout << "Error opening file!!!" << endl;
 		cout << error.what() << endl;
 	}
 
 	saveFile << yourPerson;
 	saveFile.close();
-	cout << "Увы, но файл сохранен(" << endl;
+	cout << "Sorry file saved(" << endl;
 }

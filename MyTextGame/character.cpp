@@ -5,9 +5,9 @@ short Character::get_killingsNumber() const
 		return killingsNumber;
     }
 	
-short Character::get_maxHillPoints() const
+short Character::get_maxHealthPoints() const
 	{
-		return maxHillPoints;
+		return maxHealthPoints;
 	}
 
 short Character::get_weaponID() const
@@ -44,28 +44,28 @@ string Character::get_nameCharacter() const
 
 void Character::showCharacter()
 {
-	cout << "Ваше имя: " << nameCharacter << endl;
-	cout << "Количество убийств: " << killingsNumber << endl;
-	cout << "Количество денег: " << characterMoney << endl;
-	cout << "Количество жизни: " << maxHillPoints << endl;
-	cout << "Ваша основная характеристика: " << basicStat << endl;
+	cout << "Your name is:" << nameCharacter << endl;
+	cout << "Number of kills: " << killingsNumber << endl;
+	cout << "Amount of money: " << characterMoney << endl;
+	cout << "Life Amount: " << maxHealthPoints << endl;
+	cout << "Your main characteristic: " << basicStat << endl;
 
 	if (keyForest)
 	{
-		cout << "Имеется ключ от Леса." << endl;
+		cout << "You have a key to the Forest." << endl;
 	}
 	else
 	{
-		cout << "Нету ключа от Леса." << endl;
+		cout << "You haven`t a key to the Forest." << endl;
 	}
 
 	if (keyWindField)
 	{
-		cout << "Имеется ключ от Ветряных Полей." << endl;
+		cout << "You have the key to the Wind Fields." << endl;
 	}
 	else
 	{
-		cout << "Нету ключа от Ветряных Полей." << endl;
+		cout << "You haven`t the key to the Wind Fields." << endl;
 	}
 
 	(weapons.funcReturnWeapon(weaponID)).printWeapon();
@@ -75,7 +75,7 @@ void Character::showCharacter()
 
 void Character::printWeapons()
 	{
-		CharacterWeapon tempWeapon;
+		weapon tempWeapon;
 		tempWeapon = weapons.funcReturnWeapon(weaponID);
 		tempWeapon.printWeapon();
 		
@@ -88,9 +88,9 @@ void Character::printWeapons()
 		this->killingsNumber = killingsNumber;
 	}
    
-	void  Character::set_maxHillPoints(short hillPoints)
+	void  Character::set_maxHealthPoints(short hillPoints)
 	{
-		this->maxHillPoints = hillPoints;
+		this->maxHealthPoints = hillPoints;
 	}
 
 	void  Character::set_weaponID(short hillPoints)
@@ -125,10 +125,10 @@ void Character::printWeapons()
 	
 	 
 
-	War::War()
+	Warrior::Warrior()
 	{
 		this->killingsNumber = 0;
-		this->maxHillPoints = 150;
+		this->maxHealthPoints = 150;
 		this->weaponID = 0;
 		this->basicStat = 8;
 		this->characterMoney = 0;
@@ -137,10 +137,10 @@ void Character::printWeapons()
 		string nameCharacter = "name";
 	}
 
-	War& War::operator= (const War& otherWar)
+	Warrior& Warrior::operator= (const Warrior& otherWar)
 	{
 		this->killingsNumber = otherWar.killingsNumber;
-		this->maxHillPoints = otherWar.maxHillPoints;
+		this->maxHealthPoints = otherWar.maxHealthPoints;
 		this->weaponID = otherWar.weaponID;
 		this->basicStat = otherWar.basicStat;
 		this->characterMoney = otherWar.characterMoney;
@@ -150,17 +150,17 @@ void Character::printWeapons()
 		return *this;
 	}
 
-	short War::characterDamage() 
+	short Warrior::characterDamage()
     {
-		CharacterWeapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
-	    return dealingDamage( 4 *( this->basicStat), tempWeapon.get_procentDamage() );
+		weapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
+		return dealingDamage(4 * (this->basicStat), tempWeapon.get_percentDamage());
     }
 	
 
 	Rogue::Rogue()
 	{
 		this->killingsNumber = 0;
-		this->maxHillPoints = 100;
+		this->maxHealthPoints = 100;
 		this->weaponID = 0;
 		this->basicStat = 15;
 		this->characterMoney = 0;
@@ -172,7 +172,7 @@ void Character::printWeapons()
 	Rogue& Rogue::operator= (const Rogue& otherRogue)
 	{
 		this->killingsNumber = otherRogue.killingsNumber;
-		this->maxHillPoints = otherRogue.maxHillPoints;
+		this->maxHealthPoints = otherRogue.maxHealthPoints;
 		this->weaponID = otherRogue.weaponID;
 		this->basicStat = otherRogue.basicStat;
 		this->characterMoney = otherRogue.characterMoney;
@@ -184,15 +184,15 @@ void Character::printWeapons()
 
 	short Rogue::characterDamage()
 	{
-		CharacterWeapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
-		return dealingDamage( this->basicStat, 4 * (tempWeapon.get_procentDamage()) );
+		weapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
+		return dealingDamage(this->basicStat, 4 * (tempWeapon.get_percentDamage()));
 	}
 
 
 	Monk::Monk()
 	{
 		this->killingsNumber = 0;
-		this->maxHillPoints = 130;
+		this->maxHealthPoints = 130;
 		this->weaponID = 0;
 		this->basicStat = 9;
 		this->characterMoney = 0;
@@ -204,7 +204,7 @@ void Character::printWeapons()
 	Monk& Monk::operator= (const Monk& otherMonk)
 	{
 		this->killingsNumber = otherMonk.killingsNumber;
-		this->maxHillPoints = otherMonk.maxHillPoints;
+		this->maxHealthPoints = otherMonk.maxHealthPoints;
 		this->weaponID = otherMonk.weaponID;
 		this->basicStat = otherMonk.basicStat;
 		this->characterMoney = otherMonk.characterMoney;
@@ -216,7 +216,7 @@ void Character::printWeapons()
 
 	short Monk::characterDamage()
 	{
-		CharacterWeapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
-		return dealingDamage( 2 * (this->basicStat), 2 * ( tempWeapon.get_procentDamage() ) );
+		weapon tempWeapon( this->weapons.funcReturnWeapon(this->weaponID) );
+		return dealingDamage(2 * (this->basicStat), 2 * (tempWeapon.get_percentDamage()));
 	}
 

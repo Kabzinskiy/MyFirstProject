@@ -3,12 +3,11 @@
 void openStore( Character& yourCharacter )
 {
 	system("cls");
-	setlocale(LC_ALL, "ru");
 
-	cout << "Ну, вот Вы и в магическом магазине." << endl;
-	cout << "Небольшой совет, воин больше зависит от основной характеристики." << endl;
-	cout << "Разбойник от оружия." << endl;
-	cout << "Монах зависим в равной степени, как от оружия, так и от характеристики. " << endl;
+	cout << "You are in a magic store." << endl;
+	cout << "The warrior is more dependent on the main characteristics." << endl;
+	cout << "The warrior is more dependent on the main weapon." << endl;
+	cout << "The monk is equivalent." << endl;
 
 	string choise = "1";
 	
@@ -17,41 +16,41 @@ void openStore( Character& yourCharacter )
 
 	{
 		int cost = 0;
-		cout << "Ваши сбережения равны " << yourCharacter.get_characterMoney() << endl;
-		cout << "Чтобы поправить здоровьишко, вводите 1 - стоит 30 золотых за 10 едениц. " << endl;
-		cout << "Чтобы увеличить свою основную характеристику за 90 золотых - вводите 2." << endl;
-		cout << "Для увеличения уровня оружия (120 золотых за уровень) - 3." << endl;
-		cout << "Магический ключ от леса стоит 500 золотых - вводите 4." << endl;
-		cout << "Магический ключ от ветряных полей стоит 1000 золотых - вводите 5." << endl;
-		cout << "Для выхода жмите 6." << endl;
+		cout << "Your money is equal " << yourCharacter.get_characterMoney() << endl;
+		cout << "To add health, enter 1 - it costs 30 gold for 10 units. " << endl;
+		cout << "Enter 2 to increase your basic stat for 90 gold." << endl;
+		cout << "Enter 3 to increase the level of weapons (120 gold per level)." << endl;
+		cout << "Enter 4 to get the magic key to the forest costs 500 gold." << endl;
+		cout << "Enter 5, if you want to get a magic key from the wind fields, it costs 1000 gold." << endl;
+		cout << "To exit, press 6." << endl;
 
 		cin >> choise;
 
 		if (choise == "1")
 
 		{
-			cout << "Ваше здоровье составляет " << yourCharacter.get_maxHillPoints() << " еденицы." << endl;
-			cout << "И так, Вы желаете прибавить здоровье. Сколько Вы готовы на это потратить?" << endl;
+			cout << "Your health is " << yourCharacter.get_maxHealthPoints() << " points." << endl;
+			cout << "And so, you want to add your health. How much are you willing to spend on it?" << endl;
 			cin >> cost;
 			if ((yourCharacter.get_characterMoney() - cost) >= 0)
 			{
 				short factorHealth = cost / 30;
 				short realCost = factorHealth * 30;
 				yourCharacter.set_characterMoney(yourCharacter.get_characterMoney() - realCost);
-				yourCharacter.set_maxHillPoints(yourCharacter.get_maxHillPoints() + (factorHealth * 10));
-				cout << "Мы взяли у Вас " << realCost << " золотых и добавили " << factorHealth * 10 << " жизней." << endl;
+				yourCharacter.set_maxHealthPoints(yourCharacter.get_maxHealthPoints() + (factorHealth * 10));
+				cout << "We took from you " << realCost << " gold and added " << factorHealth * 10 << " points." << endl;
 			}
 			else
 			{
-				cout << "У Вас нет необходимой суммы!" << endl;
+				cout << "You do not have the necessary money!" << endl;
 			}
 		}
 
 		else if (choise == "2")
 
 		{
-			cout << "Ваша основная характеристика равна " << yourCharacter.get_basicStat() << endl;
-			cout << "И так, Вы желаете ее увеличить. Сколько Вы готовы на это потратить?" << endl;
+			cout << "Your main characteristic is " << yourCharacter.get_basicStat() << endl;
+			cout << "And so, you wish to increase the characteristic. How much are you willing to spend on this?" << endl;
 			cin >> cost;
 			if ((yourCharacter.get_characterMoney() - cost) >= 0)
 			{
@@ -59,11 +58,11 @@ void openStore( Character& yourCharacter )
 				short realCost = factorStat * 90;
 				yourCharacter.set_characterMoney(yourCharacter.get_characterMoney() - realCost);
 				yourCharacter.set_basicStat(yourCharacter.get_basicStat() + factorStat);
-				cout << "Мы взяли у Вас " << realCost << " золотых и подняли характеристику на " << factorStat << endl;
+				cout << "We took from you " << realCost << " gold and raised the characteristic to " << factorStat << endl;
 			}
 			else
 			{
-				cout << "У Вас нет необходимой суммы!" << endl;
+				cout << "You do not have the necessary money!" << endl;
 			}
 		}
 
@@ -74,8 +73,8 @@ void openStore( Character& yourCharacter )
 			if (yourCharacter.get_weaponID() < 9)
 			{
 				yourCharacter.printWeapons();
-				cout << "Оружие можно улучшать только по 1 уровню. " << endl;
-				cout << "И так, Вы желаете улучшить оружие. Советуем ввести 120 золотых." << endl;
+				cout << "Weapons can only be upgraded at level 1." << endl;
+				cout << "You want to improve weapons. We recommend introducing 120 gold." << endl;
 				cin >> cost;
 				if ((yourCharacter.get_characterMoney() - cost) >= 0)
 				{
@@ -88,21 +87,21 @@ void openStore( Character& yourCharacter )
 				}
 				else
 				{
-					cout << "У Вас нет необходимой суммы!" << endl;
+					cout << "You do not have the necessary money!" << endl;
 				}
 
 			}
 			else
 			{
-				cout << "Простите, но Вы достигли максимального уровня оружия. Попробуйте улучшить что-нибудь другое." << endl;
+				cout << "Sorry, but you have reached the maximum level of weapons. Try to improve something else." << endl;
 			}
 		}
 
 		else if (choise == "4")
 
 		{
-			cout << "Вы можете покупать ключ от Леса сколько угодно, но надо ли оно Вам?" << endl;
-			cout << "И так, Вы желаете приобрести ключ. Сколько Вы готовы на это потратить?" << endl;
+			cout << "You can buy the key to the Forest as much as you like, but do you need it?" << endl;
+			cout << "You want to purchase a key. How much are you willing to spend on this?" << endl;
 			cin >> cost;
 			if ( ( (yourCharacter.get_characterMoney() - cost ) >= 0 ) && cost >= 500 )
 			{
@@ -111,15 +110,15 @@ void openStore( Character& yourCharacter )
 			}
 			else
 			{
-				cout << "У Вас нет необходимой суммы!" << endl;
+				cout << "You do not have the necessary money!" << endl;
 			}
 		}
 
 		else if (choise == "5")
 
 		{
-			cout << "Вы можете покупать ключ от Ветряных Полей сколько угодно, но надо ли оно Вам?" << endl;
-			cout << "И так, Вы желаете приобрести ключ. Сколько Вы готовы на это потратить?" << endl;
+			cout << "You can buy the key to the Wind Fields as much as you like, but do you need it?" << endl;
+			cout << "You want to purchase a key. How much are you willing to spend on it?" << endl;
 			cin >> cost;
 
 			if ( ( (yourCharacter.get_characterMoney() - cost) >= 0) && cost >= 1000 )
@@ -130,7 +129,7 @@ void openStore( Character& yourCharacter )
 
 			else
 			{
-				cout << "У Вас нет необходимой суммы!" << endl;
+				cout << "You don`t have the necessary money!" << endl;
 			}
 		}
 

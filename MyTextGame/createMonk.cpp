@@ -6,11 +6,9 @@ Character* createMonk()
 
 	string temporaryName = "temporaryName";
 	Character* monk = new Monk;
-	cout << "Введите что-нибудь противное на русском: " << endl;
-	SetConsoleCP(1251);
+	cout << "Enter your future name: " << endl;
 	cin >> temporaryName;
-	SetConsoleCP(866);
-	cout << "Теперь это Ваше имя, хехехе! Не расслабляйтесь." << endl;
+	cout << "Congratulations on creating your character." << endl;
 	system("pause");
 	Monk tempMonk;
 	tempMonk.set_nameCharacter(temporaryName);

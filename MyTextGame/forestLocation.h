@@ -1,3 +1,3 @@
 #pragma once
-#include "fightFunction.h"
-void funcForest(Character& yourPerson);
+#include "fight.h"
+void startForest(Character& yourPerson);

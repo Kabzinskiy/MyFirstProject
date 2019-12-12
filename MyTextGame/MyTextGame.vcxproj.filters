@@ -13,71 +13,86 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\locationFilter">
+      <UniqueIdentifier>{2dfd3fc3-4827-4ba8-a677-25095d6d75e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\classes">
+      <UniqueIdentifier>{6cb2e1f3-ac46-4876-b959-042a09934d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\locationFilter">
+      <UniqueIdentifier>{cdd57c9b-ef04-4ad5-b9cf-8792035147e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\basicFunc">
+      <UniqueIdentifier>{623efb04-3e77-4e9a-9a02-76e86b6a8ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\basicFunc">
+      <UniqueIdentifier>{fd62eb32-f6d5-4712-8db5-3f7795ecc009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\classes">
+      <UniqueIdentifier>{6c3ab339-0dae-4449-89c6-d3290f154bc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dealingDamage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="operatorForCharacter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="saveCharacter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="loadFromFile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="createWar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="monstr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="character.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="characterWeapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="createRogue.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="forestLocation.cpp">
+      <Filter>Source Files\locationFilter</Filter>
     </ClCompile>
     <ClCompile Include="createMonk.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\basicFunc</Filter>
     </ClCompile>
-    <ClCompile Include="startChoiseFunc.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="createRogue.cpp">
+      <Filter>Source Files\basicFunc</Filter>
     </ClCompile>
-    <ClCompile Include="fightFunction.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="dealingDamage.cpp">
+      <Filter>Source Files\basicFunc</Filter>
     </ClCompile>
-    <ClCompile Include="massiveWeapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="funcStartMeadow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="forestLocation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="windField.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="loadFromFile.cpp">
+      <Filter>Source Files\basicFunc</Filter>
     </ClCompile>
     <ClCompile Include="store.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\basicFunc</Filter>
     </ClCompile>
     <ClCompile Include="releaseOfCharacterMemory.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\basicFunc</Filter>
+    </ClCompile>
+    <ClCompile Include="saveCharacter.cpp">
+      <Filter>Source Files\basicFunc</Filter>
+    </ClCompile>
+    <ClCompile Include="character.cpp">
+      <Filter>Source Files\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="massiveWeapon.cpp">
+      <Filter>Source Files\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="monstr.cpp">
+      <Filter>Source Files\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="meadowLocation.cpp">
+      <Filter>Source Files\locationFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="windFieldLocation.cpp">
+      <Filter>Source Files\locationFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="createWarrior.cpp">
+      <Filter>Source Files\basicFunc</Filter>
+    </ClCompile>
+    <ClCompile Include="startChoise.cpp">
+      <Filter>Source Files\basicFunc</Filter>
+    </ClCompile>
+    <ClCompile Include="fight.cpp">
+      <Filter>Source Files\basicFunc</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Source Files\classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includeFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dealingDamage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -86,53 +101,56 @@
     <ClInclude Include="operatorForCharacter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="saveCharacter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="loadFromFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="createWar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="characterWeapon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="monstr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="createRogue.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="forestLocation.h">
+      <Filter>Header Files\locationFilter</Filter>
     </ClInclude>
     <ClInclude Include="createMonk.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\basicFunc</Filter>
     </ClInclude>
-    <ClInclude Include="startChoiseFunc.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="createRogue.h">
+      <Filter>Header Files\basicFunc</Filter>
     </ClInclude>
-    <ClInclude Include="fightFunction.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="dealingDamage.h">
+      <Filter>Header Files\basicFunc</Filter>
     </ClInclude>
-    <ClInclude Include="massiveWeapon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="funcStartMeadow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="forestLocation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="windField.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="store.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="saveCharacter.h">
+      <Filter>Header Files\basicFunc</Filter>
     </ClInclude>
     <ClInclude Include="releaseOfCharacterMemory.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="store.h">
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="loadFromFile.h">
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="character.h">
+      <Filter>Header Files\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="massiveWeapon.h">
+      <Filter>Header Files\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="monstr.h">
+      <Filter>Header Files\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="meadowLocation.h">
+      <Filter>Header Files\locationFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="windFieldLocation.h">
+      <Filter>Header Files\locationFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="createWarrior.h">
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="startChoise.h">
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="fight.h">
+      <Filter>Header Files\basicFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.h">
+      <Filter>Header Files\classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,32 +1,32 @@
-﻿Build started 01.12.2019 20:14:23.
+﻿Build started 12.12.2019 16:36:48.
      1>Project "C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\MyTextGame\MyTextGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt startChoise.cpp
+         startChoise.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\Debug\MyTextGame.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\Debug\MyTextGame.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\Debug\MyTextGame.lib" /MACHINE:X86 Debug\MyTextGame.res
          Debug\character.obj
-         Debug\characterWeapon.obj
+         Debug\weapon.obj
          Debug\createMonk.obj
          Debug\createRogue.obj
-         Debug\createWar.obj
+         Debug\createWarrior.obj
          Debug\dealingDamage.obj
-         Debug\fightFunction.obj
+         Debug\fight.obj
          Debug\forestLocation.obj
          Debug\releaseOfCharacterMemory.obj
-         Debug\funcStartMeadow.obj
+         Debug\meadowLocation.obj
          Debug\loadFromFile.obj
          Debug\main.obj
          Debug\massiveWeapon.obj
          Debug\monstr.obj
          Debug\operatorForCharacter.obj
          Debug\saveCharacter.obj
-         Debug\startChoiseFunc.obj
+         Debug\startChoise.obj
          Debug\store.obj
-         Debug\windField.obj
+         Debug\windFieldLocation.obj
          MyTextGame.vcxproj -> C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\Debug\MyTextGame.exe
      1>Done Building Project "C:\Users\Санек\documents\visual studio 2013\Projects\MyTextGame\MyTextGame\MyTextGame.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:12.41
+Time Elapsed 00:00:10.17

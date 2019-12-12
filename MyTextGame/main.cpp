@@ -1,21 +1,20 @@
 ﻿#include "includeFile.h"
 
 int main(){
-	setlocale(LC_ALL, "ru");
 	Character* person;
-	person = startChoiseFunc();
+	person = startChoise();
 	string menuChoise;
 
 	while (menuChoise != "7")
 	{
 		system("cls");
-		cout << "Вводишь 1 для похода в магазин." << endl;
-		cout << "Вводишь 2 для того, чтобы охотится на лугу." << endl;
-		cout << "Вводишь 3 для того, чтобы охотится в лесу." << endl;
-		cout << "Вводишь 4 для того, чтобы охотится на ветряных полях." << endl;
-		cout << "Вводишь 5 для того, чтобы просмотреть информацию о персонаже." << endl;
-		cout << "Вводишь 6 для того, чтобы сохраниться." << endl;
-		cout << "Вводишь 7 для того, чтобы выйти." << endl;
+		cout << "Enter 1 to go to the store." << endl;
+		cout << "Enter 2 in order to hunt in the meadow." << endl;
+		cout << "Enter 3 in order to hunt in the forest." << endl;
+		cout << "Enter 4 in order to hunt in the wind fields." << endl;
+		cout << "Enter 5 in order to view information about the character." << endl;
+		cout << "Enter 6 in order to save." << endl;
+		cout << "Enter 7 in order to exit." << endl;
 
 
 		cin >> menuChoise;
@@ -26,15 +25,15 @@ int main(){
 		}
 		else if (menuChoise == "2")
 		{
-			funcStartMeadow(*person);
+			startMeadow(*person);
 		}
 		else if (menuChoise == "3")
 		{
-			funcForest(*person);
+			startForest(*person);
 		}
 		else if (menuChoise == "4")
 		{
-			funcWindField(*person);
+			startWindField(*person);
 		}
 		else if (menuChoise == "5")
 		{

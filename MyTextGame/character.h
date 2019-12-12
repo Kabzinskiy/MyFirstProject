@@ -11,7 +11,7 @@ class Character
 protected:
 	massiveWeapon weapons;
 	short killingsNumber;
-	short maxHillPoints;
+	short maxHealthPoints;
 	short weaponID;
 	short basicStat;
 	short characterMoney;
@@ -23,7 +23,7 @@ protected:
 public:
 
 	short get_killingsNumber() const;
-	short get_maxHillPoints() const;
+	short get_maxHealthPoints() const;
 	short get_weaponID() const;
 	short get_basicStat() const;
 	short get_characterMoney() const;
@@ -34,8 +34,8 @@ public:
 	void printWeapons();
 
 	void set_killingsNumber(short killingsNumber);
-	void set_maxHillPoints(short maxHillPoints);	
-	void set_weaponID(short maxHillPoints);	
+	void set_maxHealthPoints(short maxHealthPoints);	
+	void set_weaponID(short maxHealthPoints);	
 	void set_basicStat(short basicStat);	
 	void set_characterMoney(short characterMoney);	
 	void set_keyForest(bool keyForest);	
@@ -49,12 +49,12 @@ public:
 
 
 
-class War : public Character
+class Warrior : public Character
 {
 public:
-	War();
+	Warrior();
 	short characterDamage() override;
-	War& operator= (const War& otherWar);
+	Warrior& operator= (const Warrior& otherWar);
 
 };
 

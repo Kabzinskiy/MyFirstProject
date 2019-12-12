@@ -3,9 +3,9 @@
 
 
 
-short Monstr::get_maxHillPoints() const
+short Monstr::get_maxHealthPoints() const
 {
-	return this->maxHillPoints;
+	return this->maxHealthPoints;
 }
 
 short Monstr::get_monstrPrice() const
@@ -20,9 +20,9 @@ short Monstr::get_basicMonstrStat() const
 
 
 
-void Monstr::set_maxHillPoints(short maxPoints)
+void Monstr::set_maxHealthPoints(short maxPoints)
 {
-	this->maxHillPoints = maxPoints;
+	this->maxHealthPoints = maxPoints;
 }
 
 void Monstr::set_monstrPrice(short price)

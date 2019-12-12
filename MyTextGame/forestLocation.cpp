@@ -1,6 +1,6 @@
 #include "forestLocation.h"
 
-void funcForest(Character& yourPerson)
+void startForest(Character& yourPerson)
 {
 	bool key;
 	key = yourPerson.get_keyForest();
@@ -9,30 +9,29 @@ void funcForest(Character& yourPerson)
 
 	{
 
-		cout << "Ну что же, вот вы и в лесу. Вам не терпится от кого-нибудь отгрести." << endl;
-		cout << "Пусть это будет кто-нибудь достойный, думаете Вы." << endl;
-		cout << "Вы осторожно крадетесь меж деревьев, пытаясь увидеть своего следующего врага." << endl;
+		cout << "You are in the forest. You can't wait to get a hit from someone." << endl;
+		cout << "You creep cautiously between the trees, trying to see your next enemy." << endl;
 
 
 
 		Monstr lizard;
 		lizard.set_basicMonstrStat(40);
-		lizard.set_maxHillPoints(500);
+		lizard.set_maxHealthPoints(500);
 		lizard.set_monstrPrice(50);
 
 		Monstr squirrel;
 		squirrel.set_basicMonstrStat(45);
-		squirrel.set_maxHillPoints(600);
+		squirrel.set_maxHealthPoints(600);
 		squirrel.set_monstrPrice(70);
 
 		Monstr woodpecker;
 		woodpecker.set_basicMonstrStat(50);
-		woodpecker.set_maxHillPoints(670);
+		woodpecker.set_maxHealthPoints(670);
 		woodpecker.set_monstrPrice(90);
 
 		Monstr snake;
 		snake.set_basicMonstrStat(70);
-		snake.set_maxHillPoints(700);
+		snake.set_maxHealthPoints(700);
 		snake.set_monstrPrice(150);
 
 
@@ -41,32 +40,32 @@ void funcForest(Character& yourPerson)
 		switch (random)
 		{
 		case 0:
-			cout << "Ну что ж, настал Ваш миг триумфа!!! Ваш противник - ящерица!" << endl;
-			fightFunction(yourPerson, lizard);
+			cout << "Well, your moment of triumph has come !!! Your opponent is a lizard!" << endl;
+			fight(yourPerson, lizard);
 			break;
 		case 1:
-			cout << "Ну что ж, настал Ваш миг триумфа!!! Ваш противник - белка!" << endl;
-			fightFunction(yourPerson, squirrel);
+			cout << "Well, your moment of triumph has come !!! Your opponent is a squirrel!" << endl;
+			fight(yourPerson, squirrel);
 			break;
 		case 2:
-			cout << "Ну что ж, настал Ваш миг триумфа!!! Ваш противник - дятел!" << endl;
-			fightFunction(yourPerson, woodpecker);
+			cout << "Well, your moment of triumph has come !!! Your opponent is a woodpecker!" << endl;
+			fight(yourPerson, woodpecker);
 			break;
 		default:
-			cout << "Ну что ж, настал Ваш миг триумфа!!! Ваш противник - змея!" << endl;
-			fightFunction(yourPerson, snake);
+			cout << "Well, your moment of triumph has come !!! Your opponent is a snake!" << endl;
+			fight(yourPerson, snake);
 			break;
 		}
 
 
-		cout << "Плача и рыдая, вы идите домой." << endl;
+		cout << "You cry and go to home." << endl;
 
 
 	}
 
 	else
 	{
-		cout << "Простите, но для прохода на данную локацию необходимо приобрести ключ." << endl;
+		cout << "Sorry, but to enter this location you need to purchase a key." << endl;
 	}
 	
 system("pause");

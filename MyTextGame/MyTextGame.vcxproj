@@ -65,36 +65,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="character.cpp" />
-    <ClCompile Include="characterWeapon.cpp" />
+    <ClCompile Include="weapon.cpp" />
     <ClCompile Include="createMonk.cpp" />
     <ClCompile Include="createRogue.cpp" />
-    <ClCompile Include="createWar.cpp" />
+    <ClCompile Include="createWarrior.cpp" />
     <ClCompile Include="dealingDamage.cpp" />
-    <ClCompile Include="fightFunction.cpp" />
+    <ClCompile Include="fight.cpp" />
     <ClCompile Include="forestLocation.cpp" />
     <ClCompile Include="releaseOfCharacterMemory.cpp" />
-    <ClCompile Include="funcStartMeadow.cpp" />
+    <ClCompile Include="meadowLocation.cpp" />
     <ClCompile Include="loadFromFile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiveWeapon.cpp" />
     <ClCompile Include="monstr.cpp" />
     <ClCompile Include="operatorForCharacter.cpp" />
     <ClCompile Include="saveCharacter.cpp" />
-    <ClCompile Include="startChoiseFunc.cpp" />
+    <ClCompile Include="startChoise.cpp" />
     <ClCompile Include="store.cpp" />
-    <ClCompile Include="windField.cpp" />
+    <ClCompile Include="windFieldLocation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
-    <ClInclude Include="characterWeapon.h" />
+    <ClInclude Include="weapon.h" />
     <ClInclude Include="createMonk.h" />
     <ClInclude Include="createRogue.h" />
-    <ClInclude Include="createWar.h" />
+    <ClInclude Include="createWarrior.h" />
     <ClInclude Include="dealingDamage.h" />
-    <ClInclude Include="fightFunction.h" />
+    <ClInclude Include="fight.h" />
     <ClInclude Include="forestLocation.h" />
     <ClInclude Include="releaseOfCharacterMemory.h" />
-    <ClInclude Include="funcStartMeadow.h" />
+    <ClInclude Include="meadowLocation.h" />
     <ClInclude Include="includeFile.h" />
     <ClInclude Include="loadFromFile.h" />
     <ClInclude Include="store.h" />
@@ -103,8 +103,8 @@
     <ClInclude Include="operatorForCharacter.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="saveCharacter.h" />
-    <ClInclude Include="startChoiseFunc.h" />
-    <ClInclude Include="windField.h" />
+    <ClInclude Include="startChoise.h" />
+    <ClInclude Include="windFieldLocation.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MyTextGame.rc" />
